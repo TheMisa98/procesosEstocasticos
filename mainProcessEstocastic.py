@@ -14,12 +14,12 @@ class AppProcesos(object):
 
     #COLORES
     #main_color="misty rose" #color de frame
-    main_color = "#A9DFBF"
-    titulo_c = "indianred1" #color del título, lo uso para el fondo
+    main_color = "#1A5276"
+    titulo_c = "#2ECC71" #color del título, lo uso para el fondo
 
     #FUENTES
-    f= ('DejaVu Serif', 18) #fuente para titulos
-    btn_f= ('DejaVu Serif', 12) #fuente para botones
+    f= ('Helvetica', 18) #fuente para titulos
+    btn_f= ('Helvetica', 12) #fuente para botones
 
     #FRAMES
     root=Tk() #root es la ventana principal
@@ -67,9 +67,8 @@ class AppProcesos(object):
         #print(root.configure().keys(    ))
         #COLORES DE FONDO
 
-        creditos_c = "bisque"
-        portada_c = self.main_color
-        barra_c = "#E6B0AA"
+        creditos_c = "#1A5276"
+        barra_c = "#D5DBDB"
 
 
         titulo_f=self.titulo_f
@@ -111,31 +110,6 @@ class AppProcesos(object):
             activebackground=titulo_c
             )
 
-        caminata_btn = Button(
-            barra_f,
-            text='Caminata',
-            font=btn_f,
-            #command=lambda:self.guardar(1),
-            bg=barra_c,
-            fg='black',
-            width=8,
-            relief="flat",
-            highlightbackground=barra_c,
-            activebackground=titulo_c
-            )
-
-        cadena_btn = Button(
-            barra_f,
-            text='Cadena',
-            font=btn_f,
-            #command=lambda:self.guardar(1),
-            bg=barra_c,
-            fg='black',
-            width=8,
-            relief="flat",
-            highlightbackground=barra_c,
-            activebackground=titulo_c
-            )
 
         decisiones_btn = Button(
             barra_f,
@@ -164,18 +138,16 @@ class AppProcesos(object):
             )
 
         inicio_btn.pack()
-        caminata_btn.pack()
-        cadena_btn.pack()
         decisiones_btn.pack()
         prueba_btn.pack()
 
         #root.config(menu=menu)
         root.mainloop()
 
-    def prueba(self):
-        self.edos = 3
-        self.dec = 3
-        self.min = 0
+    # def prueba(self):
+    #     self.edos = 3
+    #     self.dec = 3
+    #     self.min = 0
 
         """self.dict_decisiones = {'0': {'0': [0.0, 0.875, 0.0625, 0.0625]},
             '1': {'0': [0.0, 0.75, 0.125, 0.125], '2': [1.0, 0.0, 0.0, 0.0]},
@@ -197,12 +169,12 @@ class AppProcesos(object):
 
 
 
-        self.dict_decisiones = {'0': {'0': [0.4, 0.5, 0.1], '1': [0.7, 0.2, 0.1], '2': [0.2, 0.5, 0.3]},
-            '1': {'0': [0.1, 0.7, 0.2], '1': [0.3, 0.6, 0.1], '2': [0.0, 0.7, 0.3]},
-            '2': {'0': [0.1, 0.2, 0.7], '1': [0.1, 0.7, 0.2], '2': [0.0, 0.2, 0.8]}}
-        self.dict_costos = {'0': {'0': 280.0, '1': 220.0, '2': 258.0},
-            '1': {'0': 250.0, '1': 110.0, '2': 255.0},
-            '2': {'0': 220.0, '1': -130.0, '2': 300.0}}
+        # self.dict_decisiones = {'0': {'0': [0.4, 0.5, 0.1], '1': [0.7, 0.2, 0.1], '2': [0.2, 0.5, 0.3]},
+        #     '1': {'0': [0.1, 0.7, 0.2], '1': [0.3, 0.6, 0.1], '2': [0.0, 0.7, 0.3]},
+        #     '2': {'0': [0.1, 0.2, 0.7], '1': [0.1, 0.7, 0.2], '2': [0.0, 0.2, 0.8]}}
+        # self.dict_costos = {'0': {'0': 280.0, '1': 220.0, '2': 258.0},
+        #     '1': {'0': 250.0, '1': 110.0, '2': 255.0},
+        #     '2': {'0': 220.0, '1': -130.0, '2': 300.0}}
 
 
         """
@@ -228,7 +200,7 @@ class AppProcesos(object):
         #decisiones = {'0': {'0': [0.875, 0.125], '1': [0.125, 0.875]}, '1': {'0': [0.875, 0.125], '1': [0.125, 0.875]}}
         #costos = {'0': {'0': 14.0, '1': 0.0}, '1': {'0': 14.0, '1': 75.0}}
 
-        self.menuDecisiones()
+        # self.menuDecisiones()
 
     def inicio(self):
         root=self.root
@@ -238,16 +210,6 @@ class AppProcesos(object):
             widget.destroy()
         #frame=Frame(root, bg=c)
         frame.pack(side="top", fill="both", expand=True)
-        label_integrantes = Label(frame, text="INTEGRANTES", bg=c)
-        label_saul = Label(frame, text="Sevilla Gallardo Saúl Sebastián", bg=c)
-        label_rocio = Label(frame, text="Roldán López Rocío", bg=c)
-        label_emma = Label(frame, text="Silva Díaz Emma Liliana", bg=c)
-
-        label_integrantes.pack(pady=12, padx=20)
-        label_rocio.pack(pady=12, padx=20)
-        label_saul.pack(pady=12, padx=20)
-        label_emma.pack(pady=12, padx=20)
-
     def decisiones(self):
         root=self.root
         frame=self.frame
